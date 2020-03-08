@@ -1,0 +1,7 @@
+.wrap {
+  flex-direction: column;
+  width: 900px;
+  padding: auto;
+  margin-left: auto;
+  margin-right: auto;
+}

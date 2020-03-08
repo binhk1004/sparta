@@ -1,0 +1,35 @@
+.top {
+  background-image: url(http://www.forest.go.kr/newkfsweb/cmm/fms/FileDown.do?atchFileId=FILE_000000010008639&fileSn=0);
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  width: 350px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.top > h1 {
+  margin: 5px;
+}
+
+.top > h5 {
+  margin: 0px;
+}
+
+.font {
+  color: white;
+}
+
+#wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+* {
+  font-family: "Nanum Pen Script", cursive;
+}
