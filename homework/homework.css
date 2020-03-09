@@ -1,0 +1,27 @@
+.top-image {
+  text-align: center;
+}
+
+/* .top-text {
+  display: flex;
+  flex-direction: row;
+  padding-left: 10px;
+} */
+.name {
+  text-align: left;
+}
+
+.price {
+}
+
+.md-text {
+  padding-left: 10px;
+}
+
+.bottom {
+  padding-left: 10px;
+  width: 500px;
+}
+
+.btn {
+}
