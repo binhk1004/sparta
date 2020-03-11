@@ -12,6 +12,11 @@
   margin-bottom: 20px;
 }
 
+.main {
+  width: 700px;
+  margin: 0 auto;
+}
+
 .top-text {
   display: flex;
   flex-direction: row;
@@ -31,12 +36,16 @@
   margin-bottom: 20px;
 }
 
-.bottom-text {
-  margin-bottom: 25px;
+.notice {
+  color: red;
 }
 
 .bottom {
   width: 700px;
+}
+
+.bottom-text {
+  margin-bottom: 25px;
 }
 
 .center-block {
@@ -46,9 +55,4 @@
   margin-top: 20px;
   text-align: center;
   min-height: 10vh;
-}
-
-.main {
-  width: 700px;
-  margin: 0 auto;
 }
