@@ -27,6 +27,8 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
+    <script type="text/javascript" src="homework.js"></script>
+
     <title>상품페이지</title>
   </head>
   <body>
@@ -64,6 +66,7 @@
           <input
             type="text"
             class="form-control"
+            id="name-box"
             aria-label="Sizing example input"
             aria-describedby="inputGroup-sizing-default"
           />
@@ -90,6 +93,7 @@
           <input
             type="text"
             class="form-control"
+            id="address-box"
             aria-label="Sizing example input"
             aria-describedby="inputGroup-sizing-default"
           />
@@ -103,6 +107,7 @@
           <input
             type="text"
             class="form-control"
+            id="phone-number"
             aria-label="Sizing example input"
             aria-describedby="inputGroup-sizing-default"
           />
@@ -110,7 +115,7 @@
       </div>
     </div>
     <div class="center-block">
-      <button type="button" class="btn btn-primary">
+      <button onclick="btn()" type="button" class="btn btn-primary">
         주문하기
       </button>
     </div>

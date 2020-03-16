@@ -13,6 +13,8 @@
       }
 
       h6.warning {
+        color: red;
+        display: none;
         /* 여기도 코드가 필요하겠죠? 빨간색 글씨 */
       }
     </style>
@@ -41,7 +43,13 @@
         let list = q5.split("@");
         alert(list[1]);
         let text_input = "";
-        $("#domain-q5").append(list[1]);
+        $("#domain-q5").text(list[1]);
+        if (q5.indexOf("@") != -1) {
+          $("#warning-q5").hide;
+        } else {
+          $("#warning-q5").show;
+        }
+
         // 1. input-q5 값을 가져온다.
         // 2. 만약 가져온 값에 @가 있으면 (indexOf를 이용하기 - 찾아보자!)
         // 3. info.spartacoding@gmail.com -> gmail 만 추출해서
