@@ -6,23 +6,35 @@ function btn() {
 
   if (nameBox == "") {
     alert("이름을 입력해주세요.");
-    $("#name-box").css("background", "red");
+    $("#name-box").css("border", "solid red");
     $("#name-box").focus();
+    $("#name-box").keydown(function() {
+      $("#name-box").removeAttr("style");
+    });
     return;
   } else if (countBox == "수량을 선택하세요.") {
     alert("수량을 확인해주세요.");
-    $("#inputGroupSelect01").css("background", "red");
+    $("#inputGroupSelect01").css("border", "solid red");
     $("#inputGroupSelect01").focus();
+    $("#inputGroupSelect01").click(function() {
+      $("#inputGroupSelect01").removeAttr("style");
+    });
     return;
   } else if (addressBox == "") {
     alert("주소를 입력해주세요.");
-    $("#address-box").css("background", "red");
+    $("#address-box").css("border", "solid red");
     $("#address-box").focus();
+    $("#address-box").keydown(function() {
+      $("#address-box").removeAttr("style");
+    });
     return;
   } else if (phoneNumber == "") {
     alert("전화번호를 입력해주세요");
-    $("#phone-number").css("background", "red");
+    $("#phone-number").css("border", "solid red");
     $("#phone-number").focus();
+    $("#phone-number").keydown(function() {
+      $("#phone-number").removeAttr("style");
+    });
     return;
   } else {
     alert(
