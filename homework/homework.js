@@ -51,5 +51,34 @@ function btn() {
         "전화번호 : " +
         phoneNumber
     );
+    $("#info-table").show();
+    $("#info").append(
+      "<tr>" +
+        "<th>" +
+        nameBox +
+        "</th>" +
+        "<th>" +
+        countBox +
+        "</th>" +
+        "<th>" +
+        addressBox +
+        "</th>" +
+        "<th>" +
+        phoneNumber +
+        "</th>" +
+        "<th>" +
+        "<button>" +
+        "삭제" +
+        "</button>" +
+        "</th>"
+    );
+    $("#info").on("click", "#del-btn", function del() {
+      $(this).remove();
+    });
+
+    $("#name-box").val("");
+    $("#inputGroupSelect01 option:first").prop("selected", true);
+    $("#address-box").val("");
+    $("#phone-number").val("");
   }
 }

@@ -56,3 +56,15 @@
   text-align: center;
   min-height: 10vh;
 }
+
+#info-table {
+  display: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#info {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
