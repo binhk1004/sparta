@@ -58,6 +58,7 @@
 }
 
 #info-table {
+  text-align: center;
   display: none;
   margin-left: auto;
   margin-right: auto;
