@@ -1,6 +1,7 @@
 // function del() {
-//   $("#del_btn").click($("#info").empty();
-// }
+//   $("#del_btn").click(function del1() {
+//     $("#info").hide();
+//   });
 
 function btn() {
   let nameBox = $("#name-box").val();
@@ -56,7 +57,12 @@ function btn() {
         phoneNumber
     );
 
+    var thanks = setTimeout(function() {
+      alert("주문해주셔서 감사합니다.");
+    }, 2000);
+
     $("#info-table").show();
+
     $("#info").append(
       "<tr>" +
         "<th>" +
@@ -71,12 +77,12 @@ function btn() {
         "<th>" +
         phoneNumber +
         "</th>" +
+        // "<th>" +
+        // "<button id = 'del_btn' onclick = 'del()' type = 'button'>" +
+        // "삭제" +
+        // "</button>" +
+        // "</th>" +
         "</tr>"
-      // "<th>" +
-      // "<button id = 'del_btn' onclick = 'del()'>" +
-      // "삭제" +
-      // "</button>" +
-      // "</th>"
     );
 
     $("#name-box").val("");
