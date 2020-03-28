@@ -1,6 +1,10 @@
 import requests
 from bs4 import BeautifulSoup
 
+from pymongo import MongoClient
+client = MongoClient('localhost', 27017)
+db = client.dbsparta
+
 headers = {'User-Agent' : 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36'}
 data = requests.get('https://music.bugs.co.kr/chart',headers=headers)
 
@@ -15,4 +19,10 @@ for music in music_info:
         rank += 1
         title = title_el[0].text
         singer = singer_el[0].text
-        print(rank,(title.replace('\n',"")),singer)
+        doc = {
+            'rank' : rank,
+            'singer': singer,
+            'title' : title.replace('\n',""),
+
+        }
+        db.Music_Bugs.insert_one(doc)
