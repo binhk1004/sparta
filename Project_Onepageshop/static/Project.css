@@ -1,0 +1,71 @@
+* {
+  font-family: "Do Hyeon", sans-serif;
+}
+
+.top {
+  text-align: center;
+}
+
+.top-image {
+  width: 700px;
+  height: 550px;
+  margin-bottom: 20px;
+}
+
+.main {
+  width: 700px;
+  margin: 0 auto;
+}
+
+.top-text {
+  display: flex;
+  flex-direction: row;
+}
+
+.name {
+}
+
+.price {
+  margin-top: 10px;
+  margin-bottom: 0px;
+  margin-left: 20px;
+}
+
+.md-text {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.notice {
+  color: red;
+}
+
+.bottom {
+  width: 700px;
+}
+
+.bottom-text {
+  margin-bottom: 25px;
+}
+
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  text-align: center;
+  min-height: 10vh;
+}
+
+#info-table {
+  text-align: center;
+  display: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#info {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
