@@ -30,11 +30,11 @@ def order_start():
     return jsonify({'result':'success', 'msg': '주문정보가 정상적으로 저장 되었습니다.'})
 
 
-@app.route('/reviews', methods=['GET'])
-def read_reviews():
-    reviews = list(db.reviews.find({},{'_id':0}))
-    return jsonify({'result':'success', 'reviews':reviews})
+@app.route('/order', methods=['GET'])
+def show_list():
+    lists = list(db.shopDB.find({},{'_id':0}))
+    return jsonify({'result': 'success', 'lists': lists})
 
 
 if __name__ == '__main__':
-    app.run('0.0.0.0', port=5000, debug=True)
+    app.run('0.0.0.0', port=5001, debug=True)

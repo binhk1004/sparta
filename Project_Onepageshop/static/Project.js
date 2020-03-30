@@ -2,7 +2,6 @@
 //   $("#del_btn").click(function del1() {
 //     $("#info").hide();
 //   });
-
 function btn() {
   let nameBox = $("#name-box").val();
   let countBox = $("#inputGroupSelect01").val();
@@ -57,6 +56,10 @@ function btn() {
         phoneNumber
     );
 
+    var thanks = setTimeout(function() {
+      alert("주문해주셔서 감사합니다.");
+    }, 2000);
+
     $.ajax({
       type: "POST",
       url: "/order",
@@ -78,37 +81,58 @@ function btn() {
       }
     });
   }
+}
 
-  var thanks = setTimeout(function() {
-    alert("주문해주셔서 감사합니다.");
-  }, 2000);
+$(document).ready(function() {
+  $("#info").html("");
+  list_show();
+});
 
-  $("#info-table").show();
+function list_show() {
+  $.ajax({
+    type: "GET",
+    url: "/order",
+    data: {},
+    success: function(response) {
+      if (response["result"] == "success") {
+        // 2. 성공했을 때 리뷰를 올바르게 화면에 나타내기
+        let lists = response["lists"];
+        for (let i = 0; i < lists.length; i++) {
+          let current = lists[i];
+          make_table(
+            current["name"],
+            current["count"],
+            current["address"],
+            current["phone"]
+          );
+        }
+      } else {
+        alert("저장에 실패 하였습니다.");
+      }
+    }
+  });
 
-  $("#info").append(
-    "<tr>" +
-      "<th>" +
-      nameBox +
-      "</th>" +
-      "<th>" +
-      countBox +
-      "</th>" +
-      "<th>" +
-      addressBox +
-      "</th>" +
-      "<th>" +
-      phoneNumber +
-      "</th>" +
-      // "<th>" +
-      // "<button id = 'del_btn' onclick = 'del()' type = 'button'>" +
-      // "삭제" +
-      // "</button>" +
-      // "</th>" +
-      "</tr>"
-  );
-
-  $("#name-box").val("");
-  $("#inputGroupSelect01 option:first").prop("selected", true);
-  $("#address-box").val("");
-  $("#phone-number").val("");
+  function make_table(nameBox, countBox, addressBox, phoneNumber) {
+    $("#info").append(
+      "<tr>" +
+        "<th>" +
+        nameBox +
+        "</th>" +
+        "<th>" +
+        countBox +
+        "</th>" +
+        "<th>" +
+        addressBox +
+        "</th>" +
+        "<th>" +
+        phoneNumber +
+        "</th>" +
+        // "<th>" +
+        // "<button id = 'del_btn' onclick = 'del()' type = 'button'>" +
+        // "삭제" +
+        // "</button>" +
+        // "</th>" +
+        "</tr>"
+    );
+  }
 }
