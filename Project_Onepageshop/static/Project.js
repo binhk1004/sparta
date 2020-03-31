@@ -56,10 +56,6 @@ function btn() {
         phoneNumber
     );
 
-    var thanks = setTimeout(function() {
-      alert("주문해주셔서 감사합니다.");
-    }, 2000);
-
     $.ajax({
       type: "POST",
       url: "/order",
@@ -84,7 +80,7 @@ function btn() {
 }
 
 $(document).ready(function() {
-  $("#info").html("");
+  $("#info-table").html("");
   list_show();
 });
 
@@ -113,26 +109,26 @@ function list_show() {
   });
 
   function make_table(nameBox, countBox, addressBox, phoneNumber) {
-    $("#info").append(
+    let temp_html =
       "<tr>" +
-        "<th>" +
-        nameBox +
-        "</th>" +
-        "<th>" +
-        countBox +
-        "</th>" +
-        "<th>" +
-        addressBox +
-        "</th>" +
-        "<th>" +
-        phoneNumber +
-        "</th>" +
-        // "<th>" +
-        // "<button id = 'del_btn' onclick = 'del()' type = 'button'>" +
-        // "삭제" +
-        // "</button>" +
-        // "</th>" +
-        "</tr>"
-    );
+      "<th>" +
+      nameBox +
+      "</th>" +
+      "<th>" +
+      countBox +
+      "</th>" +
+      "<th>" +
+      addressBox +
+      "</th>" +
+      "<th>" +
+      phoneNumber +
+      "</th>" +
+      // "<th>" +
+      // "<button id = 'del_btn' onclick = 'del()' type = 'button'>" +
+      // "삭제" +
+      // "</button>" +
+      // "</th>" +
+      "</tr>";
+    $("#info").append(temp_html);
   }
 }

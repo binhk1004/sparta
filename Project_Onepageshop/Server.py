@@ -27,7 +27,7 @@ def order_start():
 
     db.shopDB.insert_one(info)
 
-    return jsonify({'result':'success', 'msg': '주문정보가 정상적으로 저장 되었습니다.'})
+    return jsonify({'result':'success', 'msg': '주문해주셔서 감사합니다.'})
 
 
 @app.route('/order', methods=['GET'])
@@ -37,4 +37,4 @@ def show_list():
 
 
 if __name__ == '__main__':
-    app.run('0.0.0.0', port=5001, debug=True)
+    app.run('0.0.0.0', port=5000, debug=True)
